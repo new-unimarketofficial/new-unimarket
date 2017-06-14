@@ -1,0 +1,29 @@
+{
+  "name": "unimarket",
+  "scripts": {
+  },
+  "env": {
+    "AWS_ACCESS_KEY_ID": {
+      "required": true
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "required": true
+    },
+    "AWS_ASSOCIATE_ID": {
+      "required": true
+    },
+    "NODE_ENV": {
+      "required": true
+    },
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
