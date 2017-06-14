@@ -33,12 +33,6 @@ app.post('/search', (req, res) => {
     ResponseGroup: 'Images, ItemAttributes, Offers, RelatedItems',
     RelationshipType: 'AuthorityTitle',
   }).then((response) => {
-    // for (let i = 0; i < response.results.ItemSearchResponse.Items.Item.length; i++) {
-    //   if (typeof response.results.ItemSearchResponse.Items.Item[i].LargeImage.URL !== 'string') {
-    //     console.log('This one doesn\'t have large image', response.results.ItemSearchResponse.Items.Item[i]);
-    //   }
-    // }
-    console.log(response.result.ItemSearchResponse.Items.Item);
     res.json(response.result.ItemSearchResponse.Items.Item);
   }).catch((err) => {
     res.json("Something went wrong! ", err);

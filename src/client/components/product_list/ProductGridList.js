@@ -101,16 +101,7 @@ class ProductGridList extends Component {
                     cols={tile.featured ? 2 : 1}
                     rows={tile.featured ? 2 : 1}
                   >
-
-                    <img src={tile.LargeImage.URL} />
-
-
-                    {/* {tile.LargeImage === 'undefined' ?
-                      <p>Image is not available</p>
-                      :
-                      <img src={                      <p>Image is not available</p>
-} />
-                    } */}
+                  <img src={tile.LargeImage.URL} />
                   </GridTile>
                   ))}
               </GridList>
