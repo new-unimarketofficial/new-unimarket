@@ -24,13 +24,19 @@ class App extends Component {
       url: '/search',
       type: 'POST',
       contentType: 'application/json',
-      dataType: 'json',
+      // dataType: 'json',
       data: JSON.stringify({
         searchQuery,
       }),
       success: (results) => {
-        if (Array.isArray(results.Item) && results.Item.length > 0) {
-          this.setState({ results: results.Item });
+        const copyResults = results.slice('');
+        if (Array.isArray(copyResults) && copyResults.length > 0) {
+          for (let i = 0; i < copyResults.length; i++) {
+            if (typeof copyResults[i].LargeImage !== 'object') {
+              copyResults.splice(i, 1);
+            }
+          }
+          this.setState({ results: copyResults });
         } else {
           window.alert('There is currently no information on ' + searchQuery);
         }

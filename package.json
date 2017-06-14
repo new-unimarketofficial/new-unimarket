@@ -39,7 +39,7 @@
     "eslint-plugin-react": "^7.0.1"
   },
   "scripts": {
-    "start": "serve -s build",
+    "start": "node src/server/index.js",
     "start-dev": "concurrently \"npm run server\" \"npm run client\"",
     "client": "webpack -d --watch",
     "server": "if [ \"$NODE_ENV\" == \"production\" ]; then node src/server/index.js; else nodemon src/server/index.js; fi",
