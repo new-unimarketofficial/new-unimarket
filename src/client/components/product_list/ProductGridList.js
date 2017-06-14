@@ -91,7 +91,7 @@ class ProductGridList extends Component {
                   <GridTile
                     style={{zIndex: 0}}
                     onClick={() => this.openModal(tile)}
-                    key={tile.LargeImage.URL}
+                    key={tile.ItemAttributes.Title}
                     title={tile.ItemAttributes.Title}
                     subtitle={tile.ItemAttributes.Author}
                     actionIcon={<IconButton><StarBorder color="white" /></IconButton>}
@@ -101,7 +101,16 @@ class ProductGridList extends Component {
                     cols={tile.featured ? 2 : 1}
                     rows={tile.featured ? 2 : 1}
                   >
+
                     <img src={tile.LargeImage.URL} />
+
+
+                    {/* {tile.LargeImage === 'undefined' ?
+                      <p>Image is not available</p>
+                      :
+                      <img src={                      <p>Image is not available</p>
+} />
+                    } */}
                   </GridTile>
                   ))}
               </GridList>

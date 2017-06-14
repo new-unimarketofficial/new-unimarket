@@ -14,7 +14,7 @@
     },
     "NODE_ENV": {
       "required": true
-    },
+    }
   },
   "formation": {
   },
