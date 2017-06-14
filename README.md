@@ -1,6 +1,9 @@
 # Unimarket
 A marketplace for community-driven exchange of goods
 
+## Deployed Link
+[Unimarket](https://new-unimarket.herokuapp.com/)
+
 ## Instructions for Starting Development
 To start developing the app, make sure to install dependencies:
 ```
@@ -14,7 +17,7 @@ AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_ACCESS_KEY
 AWS_ASSOCIATE_ID=YOUR_AWS_ASSOCIATE_ID
 ```
 
-To start the webpack development server and node server:
+To start the node server with automatic Webpack bundling:
 ```
 npm run start-dev
 ```
